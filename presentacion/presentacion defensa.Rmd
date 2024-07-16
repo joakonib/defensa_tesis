@@ -34,9 +34,11 @@ output:
 ```{r xaringan-themer, include=FALSE, warning=FALSE}
 library(xaringanthemer)
 library(mediocrethemes)
+library(fontawesome)
 
 style_mono_accent(base_color = "#43418A")
 xaringan_mediocre(pal = "coty")
+xaringanExtra::use_panelset()
 ```
 
 ```{r setup, include=FALSE}
@@ -53,23 +55,8 @@ knitr::opts_chunk$set(
 ```
 
 
+
 ## Demanda Institucional
-
-Text can be **bold**, _italic_, ~~strikethrough~~, or `inline code`.
-
-[Link to another slide](#colors).
-
-### Lorem Ipsum
-
-Dolor imperdiet nostra sapien scelerisque praesent curae metus facilisis dignissim tortor. 
-Lacinia neque mollis nascetur neque urna velit bibendum. 
-Himenaeos suspendisse leo varius mus risus sagittis aliquet venenatis duis nec.
-
-- Dolor cubilia nostra nunc sodales
-
-- Consectetur aliquet mauris blandit
-
-- Ipsum dis nec porttitor urna sed
 
 ---
 
@@ -90,7 +77,10 @@ PONER ACÁ INFO SOBRE LA INVESTIGACIÓN
 
 class: inverse, middle
 
-# Pregunta de investigación y objetivos
+
+# Pregunta y Objetivos
+
+
 
 
 ---
@@ -169,11 +159,10 @@ name: referencias
 
 ---
 
-class: inverse, middle, right
+class: inverse, center
 
 # ¡Gracias por su tiempo!
 
-![](assets/logo/ciro.jpeg)
-
-
----
+```{r ciro-image, out.width='70%', echo = F, fig.align='center'}
+knitr::include_graphics("https://raw.githubusercontent.com/joakonib/defensa_tesis/main/assets/logo/ciro.jpeg")
+```

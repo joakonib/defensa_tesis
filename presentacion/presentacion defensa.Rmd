@@ -1,10 +1,9 @@
 ---
-title: "Presentation Ninja"
-subtitle: "&#x2694;&#xFE0F; xaringan +<br/>&#x1F60E; xaringanthemer"  
+title: "Paradatos y calidad de información recolectada en estadísticas oficiales:"
+subtitle: "Aplicaciones dentro de II ENUT"  
 author: 
-  - "Yihui Xie"
-  - "Garrick Aden-Buie"
-date: '`r Sys.Date()`'
+  - "Joaquín E. Galdames Hernández"
+date: '18/07/2024'
 output:
   xaringan::moon_reader:
     css: xaringan-themer.css
@@ -14,7 +13,13 @@ output:
       highlightLines: true
       ratio: 16:9
       countIncrementalSlides: true
+      navigation:
+        scroll: false # disable slide transitions by scrolling
 ---
+
+background-image: url("assets/logo/logoudp.png")
+background-size: 15%
+background-position: 100% 0%
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
@@ -31,11 +36,7 @@ knitr::opts_chunk$set(
 
 ```{r xaringan-themer, include=FALSE, warning=FALSE}
 library(xaringanthemer)
-style_duo_accent(
-  primary_color = "#1381B0",
-  secondary_color = "#FF961C",
-  inverse_header_color = "#FFFFFF"
-)
+style_mono_accent(base_color = "#43418A")
 ```
 name: demanda institucional
 

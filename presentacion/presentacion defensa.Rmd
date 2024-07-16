@@ -32,7 +32,6 @@ library(xaringanthemer)
 library(mediocrethemes)
 
 style_mono_accent(base_color = "#43418A")
-# style_duo_accent(primary_color = "#035AA6", secondary_color = "#03A696")
 xaringan_mediocre(pal = "coty")
 ```
 
@@ -49,9 +48,6 @@ knitr::opts_chunk$set(
 )
 ```
 
-background-image: url("defensa_tesis/assets/logo/logoudp.png")
-background-size: 15%
-background-position: 100% 0%
 
 ```{r check-image-path, include=FALSE}
 file.exists("assets/logo/logoudp.png")

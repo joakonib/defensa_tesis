@@ -40,6 +40,31 @@ style_mono_accent(base_color = "#43418A")
 xaringan_mediocre(pal = "coty")
 xaringanExtra::use_panelset()
 ```
+```{r plot, include=FALSE}
+library(ggplot2)
+
+# Datos de ejemplo
+datos <- data.frame(
+  Genero = c("Hombres", "Mujeres"),
+  Tiempo = c(2.74, 5.89),
+  Participacion = c(94.5, 98.4)
+)
+
+plot <- ggplot(datos, aes(x = Genero)) + 
+  geom_bar(aes(y = Tiempo), stat = "identity", fill = "#43418A", width = 0.4, position = position_dodge(width = 0.5)) +
+  geom_text(aes(y = Tiempo, label = Tiempo), vjust = -0.5, color = "#43418A", size = 5) +
+  geom_point(aes(y = Participacion / 10), color = "#43418A", size = 3, shape = 15) +  # Cambiar shape a 15 para usar cuadrados
+  geom_text(aes(y = Participacion / 10, label = paste0(Participacion, "%")), vjust = -0.4, color = "#43418A", size = 5) +
+  scale_y_continuous(
+    name = "Tiempo",
+    sec.axis = sec_axis(~.*10, name = "Participación (%) Día Tipo"),  # Multiplicado por 10 para ajustar a la escala original
+    limits = c(0, 10)  # Aumentar el límite superior para que se vean bien las etiquetas
+  ) +
+  ylab(NULL) +
+  theme_minimal() +
+  theme(axis.title.x = element_blank())
+
+```
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
@@ -122,6 +147,10 @@ class: inverse, middle
 
 ### ¿Qué es la ENUT?
 
+```{r, echo=F, include = T, warning=F, out.width="70%", fig.align='left'}
+print(plot)
+```
+
 ### Recolección en tablet y paradatos
 
 PONER ACÁ INFO SOBRE LA INVESTIGACIÓN
@@ -130,6 +159,10 @@ PONER ACÁ INFO SOBRE LA INVESTIGACIÓN
 
 class: inverse, middle
 
+<br>
+<br>
+
+`r fontawesome::fa("bullseye", height = "3em", fill = "white")`
 
 # Pregunta y Objetivos
 
@@ -158,6 +191,11 @@ name: pregunta
 ---
 
 class: inverse, middle
+
+<br>
+<br>
+
+`r fontawesome::fa("lightbulb", height = "3em", fill = "white")`
 
 # Planteamiento metodológico
 
@@ -194,6 +232,11 @@ name: opera
 
 class: inverse, middle
 
+<br>
+<br>
+
+`r fontawesome::fa("award", height = "3em", fill = "white")`
+
 # Resultados Esperados
 
 
@@ -203,6 +246,74 @@ name: resultados esperados
 ## Resultados Esperados
 
 PONER TEXTO AQUÍ
+
+---
+
+class: inverse, middle
+
+<br>
+<br>
+
+`r fontawesome::fa("calendar-days", height = "3em", fill = "white")`
+
+# Cronograma de Trabajo
+
+---
+
+A continuación se presenta un cronograma tentativo del proyecto
+
+```{r, echo=F, include = T, out.width="100%", fig.align='center'}
+data_gantt <- data.frame(
+  Actividad = c("Entrega Informe N° III - Diseño", #1
+                "Presentación de Defensa - Diseño", #2
+                "Correcciones de Defensa", #3
+                "Procesamiento de paratados", #4 
+                "Enriquecimiento de paratados", #5
+                "Análisis preliminares - Programación", #6 
+                "Análisis preliminares - Escritura", #7
+                "Escritura de documento de tesis"), #8
+  Inicio = as.Date(c("2024-07-01", #1
+                     "2024-07-18", #2
+                     "2024-07-18", #3 
+                     "2024-08-01", #4
+                     "2024-08-01", #5 
+                     "2024-08-21", #6
+                     "2024-09-11", #7
+                     "2024-09-02")), #8
+  Fin = as.Date(c("2024-07-02", #1
+                  "2024-07-19", #2
+                  "2024-08-10", #3
+                  "2024-08-20", #4
+                  "2024-08-20", #5
+                  "2024-09-20", #6
+                  "2024-10-26", #7
+                  "2024-11-29")), #8
+  Completo = c(100, 
+               100, 
+               0, 
+               50, 
+               50, 
+               0, 
+               0, 
+               0)
+)
+
+# Ajustar los niveles para mantener el orden en el gráfico
+data_gantt$Actividad <- factor(data_gantt$Actividad, levels = rev(data_gantt$Actividad))
+
+# Crear el gráfico de Gantt
+ggplot(data_gantt, aes(x = Inicio, xend = Fin, y = Actividad, yend = Actividad)) +
+  geom_segment(size = 5, aes(color = as.factor(Completo))) +
+  scale_color_manual(values = c("0" = "lightgrey", "50" = "#7B68EE", "100" = "#43418A")) +
+  labs(title = "Cronograma de Trabajo",
+       x = NULL,
+       y = NULL,
+       color = "Porcentaje completitud") +
+  theme_minimal()
+
+```
+
+
 
 ---
 

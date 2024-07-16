@@ -16,10 +16,15 @@ output:
       navigation:
         scroll: false # disable slide transitions by scrolling
 ---
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_mono_accent(base_color = "#43418A")
+```
 
 background-image: url("assets/logo/logoudp.png")
 background-size: 15%
 background-position: 100% 0%
+
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
@@ -34,10 +39,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r xaringan-themer, include=FALSE, warning=FALSE}
-library(xaringanthemer)
-style_mono_accent(base_color = "#43418A")
-```
+
 name: demanda institucional
 
 ## Demanda Institucional
@@ -61,31 +63,18 @@ Himenaeos suspendisse leo varius mus risus sagittis aliquet venenatis duis nec.
 ---
 name: justi
 
-## Justificación
+## Antecedentes y justificación del estudio
 
-.left-column[
-Text color
+### ¿Qué es la ENUT?
 
-[Link Color](#3)
+### Recolección en tablet y paradatos
 
-**Bold Color**
-
-_Italic Color_
-
-`Inline Code`
-]
-
-.right-column[
-Lorem ipsum dolor sit amet, [consectetur adipiscing elit (link)](#3), 
-sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-Erat nam at lectus urna.
-Pellentesque elit ullamcorper **dignissim cras tincidunt (bold)** lobortis feugiat. 
-_Eros donec ac odio tempor_ orci dapibus ultrices. 
-Id porta nibh venenatis cras sed felis eget velit aliquet.
-Aliquam id diam maecenas ultricies mi.
-Enim sit amet 
-`code_color("inline")`
-venenatis urna cursus eget nunc scelerisque viverra.
-]
+PONER ACÁ INFO SOBRE LA INVESTIGACIÓN
 
 ---
+
+name: pregunta
+
+## Pregunta de Investigación
+
+PONER ACÁ INFO SOBRE LA PREGUNTA Y OBJETIVOS

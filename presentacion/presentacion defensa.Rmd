@@ -6,7 +6,7 @@ author:
 date: '18/07/2024'
 output:
   xaringan::moon_reader:
-    css: xaringan-themer.css
+    css: ["xaringan-themer.css", "assets/kunoichi.css"]
     nature:
       slideNumberFormat: "%current%"
       highlightStyle: github
@@ -18,13 +18,8 @@ output:
 ---
 ```{r xaringan-themer, include=FALSE, warning=FALSE}
 library(xaringanthemer)
-style_mono_accent(base_color = "#43418A")
+# style_mono_accent(base_color = "#43418A")
 ```
-
-background-image: url("assets/logo/logoudp.png")
-background-size: 15%
-background-position: 100% 0%
-
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
@@ -39,6 +34,13 @@ knitr::opts_chunk$set(
 )
 ```
 
+background-image: url("defensa_tesis/assets/logo/logoudp.png")
+background-size: 15%
+background-position: 100% 0%
+
+```{r check-image-path, include=FALSE}
+file.exists("assets/logo/logoudp.png")
+```
 
 name: demanda institucional
 
@@ -59,6 +61,16 @@ Himenaeos suspendisse leo varius mus risus sagittis aliquet venenatis duis nec.
 - Consectetur aliquet mauris blandit
 
 - Ipsum dis nec porttitor urna sed
+
+---
+class: middle center bg-main1
+
+# Antecedentes y justificación del estudio
+
+# Kunoichi
+#⚔
+#くノ一
+# 女
 
 ---
 name: justi

@@ -20,10 +20,14 @@ output:
 ---
 ```{css, echo=FALSE}
 .title-slide {
-  background-image: url(https://github.com/jvcasillas/ru_xaringan/raw/master/img/logo/ru_new.png);
+  background-image: url(https://raw.githubusercontent.com/joakonib/defensa_tesis/main/assets/logo/logoudp.png);
   background-position: 10% 15%;
   background-size: 150px;
-  padding-left: 100px;  /* delete this for 4:3 aspect ratio */
+  padding-right: 100px;  /* delete this for 4:3 aspect ratio */
+}
+
+.title {
+  margin-bottom: 20px; /* Espacio inferior entre la imagen y el título */
 }
 ```
 
@@ -49,12 +53,6 @@ knitr::opts_chunk$set(
 ```
 
 
-```{r check-image-path, include=FALSE}
-file.exists("assets/logo/logoudp.png")
-```
-
-name: demanda institucional
-
 ## Demanda Institucional
 
 Text can be **bold**, _italic_, ~~strikethrough~~, or `inline code`.
@@ -76,21 +74,24 @@ Himenaeos suspendisse leo varius mus risus sagittis aliquet venenatis duis nec.
 ---
 
 class: inverse, middle
-count: false
 
 # Antecedentes y justificación del estudio
 
 
 ---
-name: justi
-
-## Antecedentes y justificación del estudio
 
 ### ¿Qué es la ENUT?
 
 ### Recolección en tablet y paradatos
 
 PONER ACÁ INFO SOBRE LA INVESTIGACIÓN
+
+---
+
+class: inverse, middle
+
+# Pregunta de investigación y objetivos
+
 
 ---
 
@@ -110,6 +111,13 @@ name: pregunta
 
  - Caracterizar los distintos tipos de errores en la recolección de la II ENUT a través del uso de paradatos.
  - Describir cómo se relacionan estos errores con la experiencia de las personas encuestadoras de la II ENUT. 
+
+---
+
+class: inverse, middle
+
+# Planteamiento metodológico
+
 
 ---
 name: enfoque
@@ -140,14 +148,18 @@ name: opera
 ### Operacionalización tentativa
 
 ---
+
+class: inverse, middle
+
+# Resultados Esperados
+
+
+---
 name: resultados esperados
 
 ## Resultados Esperados
 
----
-name: cronograma
-
-## Cronograma de Trabajo
+PONER TEXTO AQUÍ
 
 ---
 
@@ -157,3 +169,11 @@ name: referencias
 
 ---
 
+class: inverse, middle, right
+
+# ¡Gracias por su tiempo!
+
+![](assets/logo/ciro.jpeg)
+
+
+---

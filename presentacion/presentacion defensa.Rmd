@@ -77,4 +77,16 @@ name: pregunta
 
 ## Pregunta de Investigación
 
-PONER ACÁ INFO SOBRE LA PREGUNTA Y OBJETIVOS
+- ¿Qué características de la recolección de la II ENUT son posibles de encontrar mediante la utilización de paradatos como herramienta de supervisión?
+
+## Objetivos
+
+- Objetivo General
+
+ - Explorar características de la recolección de la II ENUT a través de la utilización de los paradatos como herramienta de supervisión.
+
+- Objetivos Específicos
+
+ - Caracterizar los distintos tipos de errores en la recolección de la II ENUT a través del uso de paradatos.
+ - Describir cómo se relacionan estos errores con la experiencia de las personas encuestadoras de la II ENUT. 
+

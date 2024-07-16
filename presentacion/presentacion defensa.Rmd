@@ -140,8 +140,12 @@ knitr::opts_chunk$set(
 
 class: inverse, middle
 
-# Antecedentes y justificación del estudio
+<br>
+<br>
 
+`r fontawesome::fa("book", height = "3em", fill = "white")`
+
+# Antecedentes y justificación del estudio
 
 ---
 
@@ -325,7 +329,7 @@ name: referencias
 
 class: inverse, center
 
-# ¡Gracias por su tiempo!
+# ¡Gracias por su tiempo 🐱!
 
 ```{r ciro-image, out.width='70%', echo = F, fig.align='center'}
 knitr::include_graphics("https://raw.githubusercontent.com/joakonib/defensa_tesis/main/assets/logo/ciro2.JPG")

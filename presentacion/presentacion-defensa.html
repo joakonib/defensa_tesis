@@ -633,10 +633,63 @@ class: center, middle, inverse, title-slide
 
 
 
+&lt;style type=&quot;text/css&quot;&gt;
+.content-box { 
+    box-sizing: border-box;
+    background-color: #e2e2e2;
+}
+.content-box-blue,
+.content-box-gray,
+.content-box-grey,
+.content-box-army,
+.content-box-green,
+.content-box-purple,
+.content-box-red,
+.content-box-yellow {
+  box-sizing: border-box;
+  border-radius: 0px; /* Mantener esquinas cuadradas */
+  margin: 0 0 10px; /* Ajustar margen según sea necesario */
+  overflow: hidden;
+  padding: 10px 15px; /* Ajustar padding según sea necesario */
+  display: inline-block; /* Ajustar tamaño de la caja al contenido */
+  width: auto; /* Ajustar ancho según contenido */
+}
+.content-box-blue { background-color: #F0F8FF; }
+.content-box-gray { background-color: #e2e2e2; }
+.content-box-grey { background-color: #F5F5F5; }
+.content-box-army { background-color: #737a36; }
+.content-box-green { background-color: #d9edc2; }
+.content-box-purple { background-color: #e2e2f9; }
+.content-box-red { background-color: #ffcccc; }
+.content-box-yellow { background-color: #fef5c4; }
+.content-box-blue .remark-inline-code,
+.content-box-blue .remark-inline-code,
+.content-box-gray .remark-inline-code,
+.content-box-grey .remark-inline-code,
+.content-box-army .remark-inline-code,
+.content-box-green .remark-inline-code,
+.content-box-purple .remark-inline-code,
+.content-box-red .remark-inline-code,
+.content-box-yellow .remark-inline-code { 
+  background: none;
+}
 
+.full-width {
+    display: flex;
+    width: 100%;
+    flex: 1 1 auto;
+}
+&lt;/style&gt;
 
+&lt;br&gt;
+&lt;br&gt;
 
-## Demanda Institucional
+<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:3em;width:3em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#43418A;overflow:visible;position:relative;"><path d="M373.5 27.1C388.5 9.9 410.2 0 433 0c43.6 0 79 35.4 79 79c0 22.8-9.9 44.6-27.1 59.6L277.7 319l-10.3-10.3-64-64L193 234.3 373.5 27.1zM170.3 256.9l10.4 10.4 64 64 10.4 10.4-19.2 83.4c-3.9 17.1-16.9 30.7-33.8 35.4L24.4 510.3l95.4-95.4c2.6 .7 5.4 1.1 8.3 1.1c17.7 0 32-14.3 32-32s-14.3-32-32-32s-32 14.3-32 32c0 2.9 .4 5.6 1.1 8.3L1.7 487.6 51.5 310c4.7-16.9 18.3-29.9 35.4-33.8l83.4-19.2z"/></svg>
+
+# Demanda Institucional:
+
+## .content-box-purple[Sistematizar la utilización de los paradatos de la II ENUT con el fin de optimizar la supervisión de futuras encuestas.]
+
 
 ---
 
@@ -658,7 +711,6 @@ PONER ACÁ INFO SOBRE LA INVESTIGACIÓN
 class: inverse, middle
 
 
-&lt;!-- <svg aria-hidden="true" role="img" viewBox="0 0 256 512" style="height:3em;width:1.5em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M160 64c0-11.8-6.5-22.6-16.9-28.2s-23-5-32.8 1.6l-96 64C-.5 111.2-4.4 131 5.4 145.8s29.7 18.7 44.4 8.9L96 123.8V416H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h96 96c17.7 0 32-14.3 32-32s-14.3-32-32-32H160V64z"/></svg>. --&gt;
 # Pregunta y Objetivos
 
 
@@ -755,9 +807,8 @@ class: inverse, center
 "ratio": "16:9",
 "yolo": false,
 "countIncrementalSlides": true,
-"navigation": {
+"navigation": null,
 "scroll": false
-}
 });
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   window.dispatchEvent(new Event('resize'));

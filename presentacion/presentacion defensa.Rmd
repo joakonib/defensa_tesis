@@ -16,7 +16,7 @@ output:
       yolo: false
       countIncrementalSlides: true
       navigation:
-        scroll: false # disable slide transitions by scrolling
+      scroll: false # disable slide transitions by scrolling
 ---
 ```{css, echo=FALSE}
 .title-slide {
@@ -53,10 +53,63 @@ knitr::opts_chunk$set(
   hiline = TRUE
 )
 ```
+```{css, echo=FALSE}
+.content-box { 
+    box-sizing: border-box;
+    background-color: #e2e2e2;
+}
+.content-box-blue,
+.content-box-gray,
+.content-box-grey,
+.content-box-army,
+.content-box-green,
+.content-box-purple,
+.content-box-red,
+.content-box-yellow {
+  box-sizing: border-box;
+  border-radius: 0px; /* Mantener esquinas cuadradas */
+  margin: 0 0 10px; /* Ajustar margen según sea necesario */
+  overflow: hidden;
+  padding: 10px 15px; /* Ajustar padding según sea necesario */
+  display: inline-block; /* Ajustar tamaño de la caja al contenido */
+  width: auto; /* Ajustar ancho según contenido */
+}
+.content-box-blue { background-color: #F0F8FF; }
+.content-box-gray { background-color: #e2e2e2; }
+.content-box-grey { background-color: #F5F5F5; }
+.content-box-army { background-color: #737a36; }
+.content-box-green { background-color: #d9edc2; }
+.content-box-purple { background-color: #e2e2f9; }
+.content-box-red { background-color: #ffcccc; }
+.content-box-yellow { background-color: #fef5c4; }
+.content-box-blue .remark-inline-code,
+.content-box-blue .remark-inline-code,
+.content-box-gray .remark-inline-code,
+.content-box-grey .remark-inline-code,
+.content-box-army .remark-inline-code,
+.content-box-green .remark-inline-code,
+.content-box-purple .remark-inline-code,
+.content-box-red .remark-inline-code,
+.content-box-yellow .remark-inline-code { 
+  background: none;
+}
 
+.full-width {
+    display: flex;
+    width: 100%;
+    flex: 1 1 auto;
+}
+```
 
+<br>
+<br>
 
-## Demanda Institucional
+`r fontawesome::fa("pen-fancy", height = "3em", fill = "#43418A")`
+
+# Demanda Institucional:
+
+## .content-box-purple[Sistematizar la utilización de los paradatos de la II ENUT con el fin de optimizar la supervisión de futuras encuestas.]
+
 
 ---
 

@@ -1,2 +1,3 @@
 # defensa_tesis
-Xaringan de defensa de tesis MMIS
+Presentación de para Defensa de Proyecto de Tesis
+https://joakonib.github.io/defensa_tesis/presentacion/presentacion-defensa.html 

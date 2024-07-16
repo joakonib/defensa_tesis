@@ -6,25 +6,35 @@ author:
 date: '18/07/2024'
 output:
   xaringan::moon_reader:
-    css: xaringan-themer.css
+    css: "xaringan-themer.css"
+    self_contained: true
     nature:
       slideNumberFormat: "%current%"
       highlightStyle: github
       highlightLines: true
       ratio: 16:9
+      yolo: false
       countIncrementalSlides: true
       navigation:
         scroll: false # disable slide transitions by scrolling
 ---
-```{r xaringan-themer, include=FALSE, warning=FALSE}
-library(xaringanthemer)
-style_mono_accent(base_color = "#43418A")
+```{css, echo=FALSE}
+.title-slide {
+  background-image: url(https://github.com/jvcasillas/ru_xaringan/raw/master/img/logo/ru_new.png);
+  background-position: 10% 15%;
+  background-size: 150px;
+  padding-left: 100px;  /* delete this for 4:3 aspect ratio */
+}
 ```
 
-background-image: url("assets/logo/logoudp.png")
-background-size: 15%
-background-position: 100% 0%
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+library(mediocrethemes)
 
+style_mono_accent(base_color = "#43418A")
+# style_duo_accent(primary_color = "#035AA6", secondary_color = "#03A696")
+xaringan_mediocre(pal = "coty")
+```
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
@@ -39,6 +49,13 @@ knitr::opts_chunk$set(
 )
 ```
 
+background-image: url("defensa_tesis/assets/logo/logoudp.png")
+background-size: 15%
+background-position: 100% 0%
+
+```{r check-image-path, include=FALSE}
+file.exists("assets/logo/logoudp.png")
+```
 
 name: demanda institucional
 
@@ -59,6 +76,14 @@ Himenaeos suspendisse leo varius mus risus sagittis aliquet venenatis duis nec.
 - Consectetur aliquet mauris blandit
 
 - Ipsum dis nec porttitor urna sed
+
+---
+
+class: inverse, middle
+count: false
+
+# Antecedentes y justificación del estudio
+
 
 ---
 name: justi

@@ -16,10 +16,15 @@ output:
       navigation:
         scroll: false # disable slide transitions by scrolling
 ---
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_mono_accent(base_color = "#43418A")
+```
 
 background-image: url("assets/logo/logoudp.png")
 background-size: 15%
 background-position: 100% 0%
+
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
@@ -34,10 +39,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r xaringan-themer, include=FALSE, warning=FALSE}
-library(xaringanthemer)
-style_mono_accent(base_color = "#43418A")
-```
+
 name: demanda institucional
 
 ## Demanda Institucional

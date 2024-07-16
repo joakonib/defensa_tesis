@@ -90,3 +90,49 @@ name: pregunta
  - Caracterizar los distintos tipos de errores en la recolección de la II ENUT a través del uso de paradatos.
  - Describir cómo se relacionan estos errores con la experiencia de las personas encuestadoras de la II ENUT. 
 
+---
+name: enfoque
+
+## Planteamiento metodológico I
+
+### Enfoque y alcance del estudio
+
+---
+name: fuente de info
+
+## Planteamiento metodológico II
+
+### Características de la fuente de información
+
+---
+name: tecnicas
+
+## Planteamiento metodológico III
+
+### Técnicas por utilizar y potencial análisis
+
+---
+name: opera
+
+## Planteamiento metodológico IV
+
+### Operacionalización tentativa
+
+---
+name: resultados esperados
+
+## Resultados Esperados
+
+---
+name: cronograma
+
+## Cronograma de Trabajo
+
+---
+
+name: referencias
+
+## Referencias
+
+---
+

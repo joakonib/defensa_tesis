@@ -155,6 +155,22 @@ knitr::opts_chunk$set(
   display: block;
   margin: 0 auto; /* Margen automático a la izquierda y derecha */
 }
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in {
+  animation: slide-in 1s ease-out forwards;
+}
+
 ```
 
 <br>
@@ -213,7 +229,7 @@ Con motivo de tener una actualización de este tipo de información se realizó 
 
 Desde 2020, con el fin de evitar la aplicación de encuestas en papel y la digitación de sus respuestas, se tomó la decisión de realizar las distintas recolecciones de manera digital a través de Tablet o DMC (Dispositivo móvil de captura). Para esto, se ha trabajado preferentemente con la plataforma de Survey Solutions, patrocinada por el Banco Mundial. 
 
-Esta decisión institucional ha planteado distintos desafíos para los distintos equipos y estamentos que forman parte de la institución.
+Esta decisión institucional ha planteado un variopinto de desafíos para todos los equipos y estamentos que forman parte de la institución.
 
   ]
 ]
@@ -222,12 +238,14 @@ Esta decisión institucional ha planteado distintos desafíos para los distintos
 
 ### ¿Y por qué esto es importante esta decisión?
 
+<p class="slide-in">
+  <img src="https://raw.githubusercontent.com/joakonib/defensa_tesis/main/assets/logo/paradatos.gif" style="display: block; margin: 0 auto; width: 40%; height: 40%;">
+</p>
 
-<img src="https://raw.githubusercontent.com/joakonib/defensa_tesis/main/assets/logo/paradatos.gif" style="display: block; margin: 0 auto; width: 40%; height: 40%;">
 
 ---
 
-### ¿Qué son los paradatos?
+### Paradatos:
 
 Los paradatos corresponden a la información recolectada durante el proceso de aplicación de un instrumento (Callegaro, 2013). Entre algunos de los elementos a identificar está el orden en qué se responde una pregunta, la fecha y hora de la respuesta o también, el momento en que se inicia o sincronizan las respuestas para enviar la información hacia los servidores donde se alojan las respuestas (Olson & Parkhurst, 2013).
 

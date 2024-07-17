@@ -60,13 +60,18 @@ plot <- ggplot(datos, aes(x = Genero)) +
   geom_point(aes(y = Participacion / 10), color = "#43418A", size = 3, shape = 15) +  # Cambiar shape a 15 para usar cuadrados
   geom_text(aes(y = Participacion / 10, label = paste0(Participacion, "%")), vjust = -0.4, color = "#43418A", size = 5) +
   scale_y_continuous(
-    name = "Tiempo",
+    name = "Tiempo en horas",
     sec.axis = sec_axis(~.*10, name = "Participación (%) Día Tipo"),  # Multiplicado por 10 para ajustar a la escala original
     limits = c(0, 10)  # Aumentar el límite superior para que se vean bien las etiquetas
   ) +
   ylab(NULL) +
   theme_minimal() +
-  theme(axis.title.x = element_blank())
+  theme(axis.title.x = element_blank()) +
+  labs(
+    caption = "Fuente: Fuente Resultados I ENUT, INE (2016)",
+    title = "Trabajo no remunerado en la población de 12 años y más según sexo"
+  )
+  
 
 ```
 
@@ -141,6 +146,10 @@ knitr::opts_chunk$set(
     .remark-slide thead, .remark-slide tr:nth-child(2n) {
         background-color: white;
     }
+    
+    body {
+    text-align: justify;
+}
 ```
 
 <br>
@@ -166,15 +175,26 @@ class: inverse, middle
 
 ---
 
-### ¿Qué es la ENUT?
+### Encuesta Nacional Sobre Uso del Tiempo (ENUT)
 
-```{r, echo=F, include = T, warning=F, out.width="70%", fig.align='left'}
+.panelset[
+.panel[.panel-name[¿Qué es la ENUT?]
+La Encuesta Nacional Sobre Uso del Tiempo (ENUT) es una medición que permite *“caracterizar el tiempo destinado por las personas a las distintas actividades de la vida diaria, como el trabajo remunerado, el trabajo no remunerado y las actividades personales”* (INE, 2024). 
+
+
+```{r, echo=F, include = T, warning=F, out.width="80%", fig.align='center'}
 print(plot)
 ```
+]
+.panel[.panel-name[II ENUT]
+Con motivo de tener una actualización de este tipo de información se realizó la recolección oficial de la II ENUT, durante los meses de agosto a diciembre del año 2023. Esta encuesta tiene un muestreo con una representatividad urbana y por sexo dentro de todas las regiones del país y tiene una muestra objetivo de 15.490 viviendas para las cuales se necesitó un total de 390 personas encuestadoras.
+]
+]
 
-### Recolección en tablet y paradatos
 
-PONER ACÁ INFO SOBRE LA INVESTIGACIÓN
+
+
+
 
 ---
 
@@ -288,9 +308,13 @@ table_opera <- data.frame(
   fill(Definición.objetivo.conceptual, .direction = "down")
 
 # Generación de la tabla con celdas fusionadas
-kable(table_opera, format = "html", col.names = c("Dimensión", "Subdimensión", "Definición/objetivo conceptual")) %>%
-    kable_styling(full_width = TRUE, bootstrap_options = c("striped", "hover", "condensed", "responsive"), font_size = 15)%>%
-  collapse_rows(columns = c(1, 3), valign = "middle")
+table_opera %>%
+  kable(col.names = c("Dimensión", "Subdimensión", "Definición/objetivo conceptual")) %>%
+  kable_styling(full_width = TRUE, 
+                bootstrap_options = c("striped", "hover", "condensed", "responsive"), 
+                font_size = 15, 
+                fixed_thead = TRUE) %>%
+  collapse_rows(columns = c(1, 3), valign = "middle") 
 
 ```
 

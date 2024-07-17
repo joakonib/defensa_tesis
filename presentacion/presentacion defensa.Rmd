@@ -215,21 +215,23 @@ Desde 2020, con el fin de evitar la aplicación de encuestas en papel y la digit
 
 Esta decisión institucional ha planteado distintos desafíos para los distintos equipos y estamentos que forman parte de la institución.
 
-
-<iframe src="https://mysurvey.solutions/es/" width="60%" height="60%" class="centered-iframe"></iframe>
-
-
-
   ]
 ]
 
 ---
 
-### ¿Y por qué esto es importante?
+### ¿Y por qué esto es importante esta decisión?
 
 
 <img src="https://raw.githubusercontent.com/joakonib/defensa_tesis/main/assets/logo/paradatos.gif" style="display: block; margin: 0 auto; width: 40%; height: 40%;">
 
+---
+
+### ¿Qué son los paradatos?
+
+Los paradatos corresponden a la información recolectada durante el proceso de aplicación de un instrumento (Callegaro, 2013). Entre algunos de los elementos a identificar está el orden en qué se responde una pregunta, la fecha y hora de la respuesta o también, el momento en que se inicia o sincronizan las respuestas para enviar la información hacia los servidores donde se alojan las respuestas (Olson & Parkhurst, 2013).
+
+El aprovechamiento de los paradatos, como herramienta de supervisión, permite lidiar de alguna forma con el error de recolección y trabajar con una mejor calidad del dato recolectado (Lyberg, Lynn, & Schouten, 2022). Ya sea promovimiendo prácticas de supervisión durante la recolección del dato o en el posterior procesamiento de información, ya sea imputando valores o verificando la información que fue entregada con anterioridad.
 
 
 ---
@@ -374,7 +376,7 @@ Como fue señalado dentro de la demanda institucional, este proyecto se enmarca 
 
 - _Informe de aplicación de paradatos_: Documento donde básicamente se anotan las experiencias y los aprendizajes. Considerando tanto elementos que se escapen dentro del desarrollo de esta tesis de magíster como de los hallazgos que estarán en la versión final del documento.
 
-- _Documento de trabajo_: En el sitio web de la institución se presentan este tipo de archivo que corresponde a una sistematización metodológica sobre algún elemento en particular. Este documento presenta autoría y es revisado internamente por algún colega dentro de la institución. Este escenario correspondería a un deseable, a modo personal .
+- _Documento de trabajo_: En el sitio web de la institución se presentan este tipo de archivo que corresponde a una sistematización metodológica sobre algún elemento en particular. Este documento presenta autoría y es revisado internamente por algún colega dentro de la institución. URL de Referencia (https://www.ine.gob.cl/inicio/documentos-de-trabajo)
 
 
 ---
@@ -455,10 +457,18 @@ name: referencias
 
 ## Referencias
 
+- Callegaro, M. (2013). Paradata in web surveys. En F. Kreuter, Improving surveys with paradatas (págs. 339-359). New Jersey: John Wiley & Sons, Inc.
+
 - INE (2016). Documento de Principales Resultados ENUT 2015. Santiago.
+
 <!-- - INE. (2021). Manual de Procedimiento: Subproceso ejecutar, supervisar y finalizar la recolección de datos. Santiago. -->
 - INE (2024). Manual de Trabajo de Campo II ENUT. 
+
 - INE. (26 de Abril de 2024). Micrositio sobre II ENUT. Obtenido de https://www.ine.gob.cl/enut
+
+- Lyberg, L., Lynn, P., & Schouten, B. (2022). Mode issues in comparative surveys. En P. Lynn, & L. Lyberg, Improving the measurement of poverty and social exclusion in Europe: reducing non-sampling errors (págs. 321-336). Luxembourg: Publications Office of the European Union.
+
+- Olson, K., & Parkhurst, B. (2013). Collecting paradata for measurement error evalutions. En F. Kreuter, Improving surveys with paradatas (págs. 43-72). New Jersey: John Wiley & Sons, Inc.
 
 
 ---

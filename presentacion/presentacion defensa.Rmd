@@ -150,6 +150,11 @@ knitr::opts_chunk$set(
     body {
     text-align: justify;
 }
+
+img.custom-image {
+    max-width: 50%;
+    height: auto;
+}
 ```
 
 <br>
@@ -188,10 +193,11 @@ print(plot)
 ]
 .panel[.panel-name[II ENUT]
 Con motivo de tener una actualización de este tipo de información se realizó la recolección oficial de la II ENUT, durante los meses de agosto a diciembre del año 2023. Esta encuesta tiene un muestreo con una representatividad urbana y por sexo dentro de todas las regiones del país y tiene una muestra objetivo de 15.490 viviendas para las cuales se necesitó un total de 390 personas encuestadoras.
+
+<img src="https://raw.githubusercontent.com/joakonib/defensa_tesis/main/assets/logo/ch.png" style="width: 50%;">
+
 ]
 ]
-
-
 
 
 

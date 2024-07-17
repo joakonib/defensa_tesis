@@ -7,6 +7,7 @@ date: '18/07/2024'
 output:
   xaringan::moon_reader:
     css: "xaringan-themer.css"
+    # css: [default, metropolis, metropolis-fonts,xaringan-themer.css]
     self_contained: true
     nature:
       slideNumberFormat: "%current%"
@@ -31,10 +32,13 @@ output:
 }
 ```
 
-```{r xaringan-themer, include=FALSE, warning=FALSE}
+```{r xaringan, include=FALSE, warning=FALSE}
 library(xaringanthemer)
 library(mediocrethemes)
 library(fontawesome)
+library(knitr)
+library(kableExtra)
+library(tidyverse)
 
 style_mono_accent(base_color = "#43418A")
 xaringan_mediocre(pal = "coty")
@@ -125,6 +129,19 @@ knitr::opts_chunk$set(
     flex: 1 1 auto;
 }
 ```
+```{css kable, echo=F}
+    /* Table width = 100% max-width */
+
+    .remark-slide table{
+        width: 100%;
+    }
+
+    /* Change the background color to white for shaded rows (even rows) */
+
+    .remark-slide thead, .remark-slide tr:nth-child(2n) {
+        background-color: white;
+    }
+```
 
 <br>
 <br>
@@ -207,9 +224,10 @@ class: inverse, middle
 ---
 name: enfoque
 
-## Planteamiento metodológico I
 
 ### Enfoque y alcance del estudio
+
+
 
 ---
 name: fuente de info
@@ -228,9 +246,53 @@ name: tecnicas
 ---
 name: opera
 
-## Planteamiento metodológico IV
-
 ### Operacionalización tentativa
+
+```{r opera, echo=FALSE, include = T, out.width="80%"}
+
+table_opera <- data.frame(
+  Dimensión = c(
+    "Tiempos y horarios de aplicación", #1 
+    NA, #2 
+    "Errores de aplicación - CH", #3
+    NA, #4
+    "Errores de aplicación - CUT", #5 
+    "Revisión de comentarios", #7
+    "Flujo de aplicación", #9
+    NA, #10
+    NA #11
+    ),
+  Subdimensión = c(
+    "Tiempos de aplicación de Encuesta", #1
+    "Horarios de aplicación de encuesta", #2
+    "Borrado de integrantes", #3
+    "Cambio de respuestas en variables claves", #4 
+    "Cambio de respuestas en preguntas de tiempo", #5 
+    "Revisión de comentarios", #7 
+    "Flujo de aplicación CH", #9 
+    "Flujo de aplicación CUT", #10
+    "Flujo de aplicación general" #11
+    ),
+  Definición.objetivo.conceptual = c(
+    "Medir tiempo de aplicación tanto de CH y CUT.", #1
+    "Encontrar tiempos en dónde la aplicación de CH y CUT resultó más exitosa.", #2
+    "El borrado de integrantes afectaba al correcto funcionamiento de la encuesta en Survey Solutions.", #3
+    "Al momento de cambiar preguntas claves del CH es posible afectar saltos dentro del CUT. Por ejemplo, una de estas variables claves corresponde a la situación educacional de algún integrante.", #4
+    "Identificar en preguntas de tiempo dedicado a las actividades cuáles fueron las preguntas que presentaron mayores cambios en el tiempo declarado.", #5
+    "Chequear cuáles fueron las preguntas tanto de CH y CUT que recibieron mayores comentarios tanto por personas encuestadoras como por sus encargados. Con el fin de determinar cuáles pudieron ser las preguntas más complejas de la medición.", #7
+    "Graficar cuáles fueron los flujos de cada cuestionario por separado y de forma integrada.", #9
+    NA, #10
+    NA #11 
+  )) %>%
+  fill(Dimensión, .direction = "down") %>% 
+  fill(Definición.objetivo.conceptual, .direction = "down")
+
+# Generación de la tabla con celdas fusionadas
+kable(table_opera, format = "html", col.names = c("Dimensión", "Subdimensión", "Definición/objetivo conceptual")) %>%
+    kable_styling(full_width = TRUE, bootstrap_options = c("striped", "hover", "condensed", "responsive"), font_size = 15)%>%
+  collapse_rows(columns = c(1, 3), valign = "middle")
+
+```
 
 ---
 
@@ -275,7 +337,8 @@ data_gantt <- data.frame(
                 "Enriquecimiento de paratados", #5
                 "Análisis preliminares - Programación", #6 
                 "Análisis preliminares - Escritura", #7
-                "Escritura de documento de tesis"), #8
+                "Anomización de datos", #8
+                "Escritura de documento de tesis"), #9
   Inicio = as.Date(c("2024-07-01", #1
                      "2024-07-18", #2
                      "2024-07-18", #3 
@@ -283,7 +346,8 @@ data_gantt <- data.frame(
                      "2024-08-01", #5 
                      "2024-08-21", #6
                      "2024-09-11", #7
-                     "2024-09-02")), #8
+                     "2024-09-11", #8
+                     "2024-09-02")), #9
   Fin = as.Date(c("2024-07-02", #1
                   "2024-07-19", #2
                   "2024-08-10", #3
@@ -291,6 +355,7 @@ data_gantt <- data.frame(
                   "2024-08-20", #5
                   "2024-09-20", #6
                   "2024-10-26", #7
+                  "2024-11-05", #8
                   "2024-11-29")), #8
   Completo = c(100, 
                100, 
@@ -299,6 +364,7 @@ data_gantt <- data.frame(
                50, 
                0, 
                0, 
+               0,
                0)
 )
 
@@ -329,7 +395,7 @@ name: referencias
 
 class: inverse, center
 
-# ¡Gracias por su tiempo 🐱!
+# ¡Gracias por su tiempo! 🐱
 
 ```{r ciro-image, out.width='70%', echo = F, fig.align='center'}
 knitr::include_graphics("https://raw.githubusercontent.com/joakonib/defensa_tesis/main/assets/logo/ciro2.JPG")

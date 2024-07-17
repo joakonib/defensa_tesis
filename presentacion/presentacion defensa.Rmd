@@ -194,8 +194,6 @@ Con motivo de tener una actualización de este tipo de información se realizó 
 
 
 
-
-
 ---
 
 class: inverse, middle

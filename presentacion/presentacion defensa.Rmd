@@ -3,7 +3,7 @@ title: "Paradatos y calidad de información recolectada en estadísticas oficial
 subtitle: "Aplicaciones dentro de II ENUT"  
 author: 
   - "Joaquín E. Galdames Hernández"
-date: '18/07/2024'
+date: '18 de Julio de 2024'
 output:
   xaringan::moon_reader:
     css: "xaringan-themer.css"
@@ -173,6 +173,7 @@ knitr::opts_chunk$set(
 
 ```
 
+
 <br>
 <br>
 
@@ -245,15 +246,11 @@ Esta decisión institucional ha planteado un variopinto de desafíos para todos 
 
 ---
 
-### Paradatos:
+### Paradatos
 
 Los paradatos corresponden a la información recolectada durante el proceso de aplicación de un instrumento (Callegaro, 2013). Entre algunos de los elementos a identificar está el orden en qué se responde una pregunta, la fecha y hora de la respuesta o también, el momento en que se inicia o sincronizan las respuestas para enviar la información hacia los servidores donde se alojan las respuestas (Olson & Parkhurst, 2013).
 
 El aprovechamiento de los paradatos, como herramienta de supervisión, permite lidiar de alguna forma con el error de recolección y trabajar con una mejor calidad del dato recolectado (Lyberg, Lynn, & Schouten, 2022). Ya sea promovimiendo prácticas de supervisión durante la recolección del dato o en el posterior procesamiento de información, ya sea imputando valores o verificando la información que fue entregada con anterioridad.
-
-
-
----
 
 ---
 ### Proceso de Producción Estadística:
@@ -267,7 +264,7 @@ En particular, la institución se rige bajo el GSBPM (Generic Statistical Busine
 ]
 .panel[.panel-name[Etapas de la Producción Estadística]
 
-<img src="https://raw.githubusercontent.com/joakonib/defensa_tesis/main/assets/logo/gsbpm.png" style="display: block; margin: 0 auto; width: 80%; height: 80%;">
+<img src="https://raw.githubusercontent.com/joakonib/defensa_tesis/main/assets/logo/gsbpm2.png" style="display: block; margin: 0 auto; width: 80%; height: 80%;">
 <p>Fuente: UNECE (2016)</p>
 
 ]
@@ -321,8 +318,36 @@ class: inverse, middle
 ---
 name: enfoque
 
+## Planteamiento metodológico I
 
-### Enfoque y alcance del estudio
+.panelset[
+.panel[.panel-name[Enfoque y alcance del estudio]
+
+El presente estudio presenta un enfoque cuantitativo, ya que considera que las variables que se desean medir son posibles de analizar bajo procedimientos estadísticos (Creswell, 2009). Bajo este ámbito, el análisis de los paradatos de la II ENUT invita a pensar los datos de forma distinta, es decir, desarrollar la imaginación estadística al tratar de buscar resultados (Ritchey, 2006). 
+
+Conforme a los alcances de la investigación, el proyecto se mueve dentro de dos tipos: exploratoria y descriptiva. Para esto se utilizan las definiciones de Padua (2018):
+
+- Es exploratorio a nivel institucional ya que aún no existen directrices o documentaciones que den cuenta de la utilización de paradatos. 
+
+- También puede considerarse descriptivo puesto que parte por esquemas y formas de trabajo preestablecidas, en donde el diagnóstico es más fácil de constreñir. En este sentido es posible apoyarse sobre la bibliografía respecto a la reducción de los errores no muestrales y/o errores de medición.
+
+]
+.panel[.panel-name[Unidad de Análisis y Fuente de Info]
+
+- Unidad de análisis: Distintas interacciones que se generan en cada entrevista. En este sentido, el foco de la unidad de análisis puede ir cambiando según cuál es el indicador que se está levantando.
+
+- Fuente Principal: Base que contiene los paradatos. Esta base se creó al momento de llenar la información dentro de los distintos cuestionarios de II ENUT, por lo cual es posible señalar que ya se encuentra “recolectada”.
+
+- Fuente Secundaria: Estructura de los grupos de recolección y a características de las personas que encuestaron dentro de la II ENUT, por nombrar algún ejemplo.
+
+- Software/Programa: RStudio 
+
+⚠️ 
+Asimismo, y al considerar que la información es un bien de uso público y que el Instituto Nacional de Estadísticas se encuentra regido por la Ley 17.374  (Chile, 1970), la cual hace referencia al Secreto Estadístico.
+
+
+]
+]
 
 
 
@@ -498,7 +523,13 @@ name: referencias
 
 ## Referencias
 
+<!-- Máximo 7 por slide (necesario recortar al final) -->
+
 - Callegaro, M. (2013). Paradata in web surveys. En F. Kreuter, Improving surveys with paradatas (págs. 339-359). New Jersey: John Wiley & Sons, Inc.
+
+- Chile. (1970). Ley 17.374: Establece el Instituto Nacional de Estadísticas. Santiago: Biblioteca del Congreso Nacional de Chile.
+
+- Creswell, J. (2009). Research design: qualitative, quantitative and mixed methods approaches. California: Sage Publications.
 
 - INE (2016). Documento de Principales Resultados ENUT 2015. Santiago.
 
@@ -510,6 +541,12 @@ name: referencias
 - Lyberg, L., Lynn, P., & Schouten, B. (2022). Mode issues in comparative surveys. En P. Lynn, & L. Lyberg, Improving the measurement of poverty and social exclusion in Europe: reducing non-sampling errors (págs. 321-336). Luxembourg: Publications Office of the European Union.
 
 - Olson, K., & Parkhurst, B. (2013). Collecting paradata for measurement error evalutions. En F. Kreuter, Improving surveys with paradatas (págs. 43-72). New Jersey: John Wiley & Sons, Inc.
+
+- Padua, J. (2018). Técnicas de investigación aplicadas a las ciencias sociales. Ciudad de México: Fondo de Cultura Económica.
+
+- Ritchey, F. (2006). Estadística para las ciencias sociales. Ciudad de México: McGraw-Hill Interamericana.
+
+- UNECE. (2016). Modelo genérico del proceso estadístico: GSBPM. Obtenido de https://unece.org/fileadmin/DAM/stats/documents/ece/ces/ge.58/2016/mtg4/Paper_8_GSBPM_5.0_v1.1.pdf
 
 
 ---

@@ -204,7 +204,7 @@ class: inverse, middle
 La Encuesta Nacional Sobre Uso del Tiempo (ENUT) es una medición que permite *“caracterizar el tiempo destinado por las personas a las distintas actividades de la vida diaria, como el trabajo remunerado, el trabajo no remunerado y las actividades personales”* (INE, 2024). 
 
 
-```{r, echo=F, include = T, warning=F, out.width="80%", fig.align='center'}
+```{r print-plot, echo=F, include = T, warning=F, out.width="80%", fig.align='center'}
 print(plot)
 ```
 ]

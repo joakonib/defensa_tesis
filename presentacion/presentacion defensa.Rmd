@@ -251,6 +251,21 @@ Los paradatos corresponden a la información recolectada durante el proceso de a
 
 El aprovechamiento de los paradatos, como herramienta de supervisión, permite lidiar de alguna forma con el error de recolección y trabajar con una mejor calidad del dato recolectado (Lyberg, Lynn, & Schouten, 2022). Ya sea promovimiendo prácticas de supervisión durante la recolección del dato o en el posterior procesamiento de información, ya sea imputando valores o verificando la información que fue entregada con anterioridad.
 
+<img src="https://raw.githubusercontent.com/joakonib/defensa_tesis/main/assets/logo/gsbpm.png" style="width: 40%; height: auto;">
+
+---
+
+---
+### Proceso de Producción Estadística:
+
+.panelset[
+.panel[.panel-name[GSBPM]
+
+El INE al ser el organismo encargado de la operación estadística del país se rige por distintos procesos o flujos que permiten hacer una comparación con distintas oficinas nacionales estadísticas de otros países, esto es importante puesto que lleva a estandarizar el proceso de la producción estadística. 
+
+En particular la institución se rige bajo el GSBPM (Generic Statistical Business Process Model) como marco de referencia. Este marco fue creado por Naciones Unidas y permite diferenciar entre Procesos, los cuales son posibles de desgranar en distintos subprocesos. 
+]
+]
 
 ---
 

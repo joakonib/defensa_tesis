@@ -10,6 +10,7 @@ output:
     # css: [default, metropolis, metropolis-fonts,xaringan-themer.css]
     self_contained: true
     nature:
+      df_print: paged
       slideNumberFormat: "%current%"
       highlightStyle: github
       highlightLines: true
@@ -179,7 +180,7 @@ knitr::opts_chunk$set(
 
 `r fontawesome::fa("pen-fancy", height = "3em", fill = "#43418A")`
 
-# Demanda Institucional:
+# Demanda Institucional
 
 ## .content-box-purple[Sistematizar la utilización de los paradatos de la II ENUT con el fin de optimizar la supervisión de futuras encuestas.]
 
@@ -255,7 +256,7 @@ Entre algunos de los elementos a identificar está el orden en qué se responde 
 El aprovechamiento de los paradatos, como herramienta de supervisión, permite lidiar de alguna forma con el error de recolección y trabajar con una mejor calidad del dato recolectado (Lyberg, Lynn, & Schouten, 2022). Ya sea promovimiendo prácticas de supervisión durante la recolección del dato o en el posterior procesamiento de información, ya sea imputando valores o verificando la información que fue entregada con anterioridad.
 
 ---
-### Proceso de Producción Estadística:
+### Proceso de Producción Estadística
 
 .panelset[
 .panel[.panel-name[GSBPM]
@@ -269,6 +270,18 @@ En particular, la institución se rige bajo el GSBPM (Generic Statistical Busine
 <img src="https://raw.githubusercontent.com/joakonib/defensa_tesis/main/assets/logo/gsbpm2.png" style="display: block; margin: 0 auto; width: 80%; height: 80%;">
 <p>Fuente: UNECE (2016)</p>
 
+]
+.panel[.panel-name[Ejecución de Recolección]
+
+<img src="https://raw.githubusercontent.com/joakonib/defensa_tesis/main/assets/logo/4.3ejec recoleccion.png" style="display: block; margin: 0 auto; width: 80%; height: 80%;">
+<p>Fuente: INE (2021)</p>
+
+]
+
+.panel[.panel-name[Ejecutar Supervisión]
+
+<img src="https://raw.githubusercontent.com/joakonib/defensa_tesis/main/assets/logo/etapa 3. ejeuc super.png" style="display: block; margin: 0 auto; width: 80%; height: 80%;">
+<p>Fuente: INE (2021)</p>
 ]
 ]
 
@@ -329,9 +342,9 @@ El presente estudio presenta un enfoque cuantitativo, ya que considera que las v
 
 Conforme a los alcances de la investigación, el proyecto se mueve dentro de dos tipos: exploratoria y descriptiva. Para esto se utilizan las definiciones de Padua (2018):
 
-- Es exploratorio a nivel institucional ya que aún no existen directrices o documentaciones que den cuenta de la utilización de paradatos. 
+- Exploratorio a nivel institucional ya que aún no existen directrices o documentaciones que den cuenta de la utilización de paradatos. 
 
-- También puede considerarse descriptivo puesto que parte por esquemas y formas de trabajo preestablecidas, en donde el diagnóstico es más fácil de constreñir. En este sentido es posible apoyarse sobre la bibliografía respecto a la reducción de los errores no muestrales y/o errores de medición.
+- Descriptivo puesto que parte por esquemas y formas de trabajo preestablecidas, en donde el diagnóstico es más fácil de constreñir. En este sentido es posible apoyarse sobre la bibliografía respecto a la reducción de los errores no muestrales y/o errores de medición.
 
 ]
 .panel[.panel-name[Unidad de Análisis y Fuente de Info]
@@ -359,8 +372,9 @@ name: fuente de info
 ## Planteamiento metodológico II
 
 .panelset[
-.panel[.panel-name[Info Disponible en Paradatos]
+.panel[.panel-name[Formato Paradatos]
 
+Información disponible en archivo paradatos Survey Solutions
 ```{r suso, echo=FALSE, include = T, out.width="80%"}
 
 table_suso <- data.frame(
@@ -376,14 +390,14 @@ table_suso <- data.frame(
     "En esta columna se guarda cuál fue la respuesta añadida/borrada"
   ),
   Ejemplo = c(
-    "75efdc0456fb4b35be4690bd19eab870",
+    "53fb5b4bb4b04626a010b08236bcbfd1",
     "1",
     "AnswerSet",
-    "Enumerator25",
+    "999999999-0",
     "1",
     "2018-12-28T23:00:59.123",
     "-05:00:00",
-    "XXXXX"
+    "c2||3||"
   )
 )
 
@@ -392,16 +406,31 @@ table_suso  %>%
   kable_styling(full_width = TRUE, 
                 bootstrap_options = c("striped", "hover", "condensed", "responsive"), 
                 font_size = 15, 
-                fixed_thead = TRUE)
+                fixed_thead = TRUE) %>% 
+  footnote(general = "Fuente: Elaboración propia a raíz de información en página web de Survey Solutions (2024)",
+           general_title = "")
 
 ```
 
+Para mayor información revisar: https://docs.mysurvey.solutions/headquarters/export/paradata_file_format/ 
+
 ]
-.panel[.panel-name[Ejemplo de una base de paradatos]
+.panel[.panel-name[Ejemplo de Paradatos]
 
-```{r parad, echo=FALSE, include = T, out.width="80%"}
+```{r parad, echo=FALSE, include = T, out.width="60%", out.heigth="60%"}
+library(tidyverse)
 
-test_data <- readRDS("input/paradatos filtrados.RDS")
+test_data <- 
+readRDS(url("https://github.com/joakonib/defensa_tesis/raw/main/input/paradata_f.rds")) %>% 
+  filter(!order %in% c(40,55,56))
+
+test_data %>%
+  kable("html", col.names = colnames(test_data), escape = FALSE) %>%
+  kable_styling(full_width = TRUE, 
+                bootstrap_options = c("striped", "hover", "condensed", "responsive"), 
+                font_size = 12, 
+                fixed_thead = TRUE) %>%
+  scroll_box(width = "100%", height = "500px")
 
 ```
 
@@ -414,12 +443,20 @@ name: tecnicas
 
 ## Planteamiento metodológico III
 
-### Técnicas por utilizar y potencial análisis
+.panelset[
+.panel[.panel-name[Técnicas por utilizar]
 
----
-name: opera
 
-### Operacionalización tentativa
+- _Preponderante_ corresponde a análisis de índole descriptivos; univariados y bivariados.
+
+- _Complementar_: A través de métodos de interdependencia. Ideal reducir información a través de un cluster de k-medias
+
+- _Principal dificultad_: Inexperiencia a nivel institucional y personal.
+
+
+
+]
+.panel[.panel-name[Operacionalización tentativa]
 
 ```{r opera, echo=FALSE, include = T, out.width="80%"}
 
@@ -470,6 +507,11 @@ table_opera %>%
   collapse_rows(columns = c(1, 3), valign = "middle") 
 
 ```
+
+
+]
+]
+
 
 ---
 
@@ -570,9 +612,9 @@ ggplot(data_gantt, aes(x = Inicio, xend = Fin, y = Actividad, yend = Actividad))
 
 ---
 
-name: referencias
+name: referencias1
 
-## Referencias
+## Referencias I
 
 <!-- Máximo 7 por slide (necesario recortar al final) -->
 
@@ -582,12 +624,22 @@ name: referencias
 
 - Creswell, J. (2009). Research design: qualitative, quantitative and mixed methods approaches. California: Sage Publications.
 
-- INE (2016). Documento de Principales Resultados ENUT 2015. Santiago.
+- de Leeuw, E., Hox, J., & Snijkers, G. (1995). The effect of computer-assisted interviewing on data quality. A review. Market Research Society. Journal., 37(4), 1-19.
 
-<!-- - INE. (2021). Manual de Procedimiento: Subproceso ejecutar, supervisar y finalizar la recolección de datos. Santiago. -->
-- INE (2024). Manual de Trabajo de Campo II ENUT. 
+
+- INE. (2016). Documento de Principales Resultados ENUT 2015. Santiago.
+
+- INE. (2021). Manual de Procedimiento: Subproceso ejecutar, supervisar y finalizar la recolección de datos. Santiago.
+
+- INE. (2024). Manual de Trabajo de Campo II ENUT. 
 
 - INE. (26 de Abril de 2024). Micrositio sobre II ENUT. Obtenido de https://www.ine.gob.cl/enut
+
+---
+
+name: referencias2
+
+## Referencias II
 
 - Lyberg, L., Lynn, P., & Schouten, B. (2022). Mode issues in comparative surveys. En P. Lynn, & L. Lyberg, Improving the measurement of poverty and social exclusion in Europe: reducing non-sampling errors (págs. 321-336). Luxembourg: Publications Office of the European Union.
 
@@ -597,8 +649,12 @@ name: referencias
 
 - Ritchey, F. (2006). Estadística para las ciencias sociales. Ciudad de México: McGraw-Hill Interamericana.
 
-- UNECE. (2016). Modelo genérico del proceso estadístico: GSBPM. Obtenido de https://unece.org/fileadmin/DAM/stats/documents/ece/ces/ge.58/2016/mtg4/Paper_8_GSBPM_5.0_v1.1.pdf
+- Sierra Bravo, R. (2001). Técnicas de investigación social: Teoría y ejercicios. Madrid: Paraninfo.
 
+- Survey Solutions. (02 de Junio de 2024). Obtenido de Sitio de Survey Solutions: https://mysurvey.solutions/es/
+Survey Solutions. (02 de Junio de 2024). Paradata file format. Obtenido de https://docs.mysurvey.solutions/headquarters/export/paradata_file_format/
+
+- UNECE. (2016). Modelo genérico del proceso estadístico: GSBPM. Obtenido de https://unece.org/fileadmin/DAM/stats/documents/ece/ces/ge.58/2016/mtg4/Paper_8_GSBPM_5.0_v1.1.pdf
 
 ---
 
